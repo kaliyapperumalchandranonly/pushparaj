@@ -1,5 +1,5 @@
 streamlit
 pandas 
-sklearn
+sciKit-learn
 datetime
 matplotlib
