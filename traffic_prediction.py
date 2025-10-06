@@ -6,7 +6,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 st.set_page_config(page_title="ZAMTOLOV:The Traffic volume predictor....", layout="centered")
 st.title("🚦 ZAMTOLOV : The traffic volume predictor")
-df = pd.read_csv("south_chennai_traffic_2019_2025.csv", parse_dates=['date'])
+df = pd.read_csv("south_chennai_traffic_2019_20251.csv", parse_dates=['date'])
 df['date'] = pd.to_datetime(df['date'],format='%d-%m-%Y %H:%M')
 df['month'] = df['date'].dt.month
 df['year'] = df['date'].dt.year
@@ -59,3 +59,4 @@ if st.button("Predict"):
         st.success(f"Predicted traffic volume on {date_input} for highway {highway_number}: **{int(prediction)} vehicles**")
     except Exception as e:
         st.error(f"Error: {e}")
+
